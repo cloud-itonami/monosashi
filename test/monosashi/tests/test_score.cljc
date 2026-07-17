@@ -10,8 +10,7 @@
 ;; autorun/load-residuals, which reconstitutes the original {:residuals [...]}
 ;; map so this test keeps working unchanged.
 (def seed
-  (-> (io/file *file*) .getParentFile .getParentFile
-      (io/file "data" "seed-scores.kotoba.edn") str
+  (-> (io/file "data" "seed-scores.kotoba.edn") str
       autorun/load-residuals))
 
 (def as-of "2026-06-27T00:00:00Z")

@@ -14,7 +14,7 @@
 
 #?(:clj
    (def log-default
-     (str (System/getProperty "user.dir") "/20-actors/monosashi/data/monosashi.datoms.kotoba.edn")))
+     (str (System/getProperty "user.dir") "/data/monosashi.datoms.kotoba.edn")))
 
 (defn- add [entity attr value] [":db/add" entity attr value])
 

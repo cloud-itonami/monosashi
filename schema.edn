@@ -1,4 +1,4 @@
-;; 20-actors/monosashi/schema.edn — Datomic/Datascript-compatible schema for
+;; schema.edn — Datomic/Datascript-compatible schema for
 ;; monosashi's datomized .edn files (ported manifest/edn-datomize.cljs semantics,
 ;; hand-run for this actor per the Phase 4 fan-out). :db/ident attr defs list.
 ;; No Datomic-specific keys (:db.install/_attribute etc). Do not hand-edit —

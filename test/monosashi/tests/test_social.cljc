@@ -13,8 +13,7 @@
 ;; autorun/load-residuals, which reconstitutes the original {:residuals [...]}
 ;; map so this test keeps working unchanged.
 (def seed
-  (-> (io/file *file*) .getParentFile .getParentFile
-      (io/file "data" "seed-scores.kotoba.edn") str
+  (-> (io/file "data" "seed-scores.kotoba.edn") str
       autorun/load-residuals))
 
 (def member "did:web:etzhayyim.com:member:abc")
