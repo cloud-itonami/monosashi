@@ -17,7 +17,7 @@
             compared as parsed instants (offset-correct), never as raw strings.
     G12   — anti-pseudoscience: bands are grouped per (actor, baseline) so skill is always vs ONE
             documented baseline; :eval/skilled is true ONLY if p50 skill > 0."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 ;; ── input shape (mitooshi score residual, per scored forecast) ───────────────────────────────
 ;; {:forecast/actor "mitooshi" :forecast/series-id "transit-load-shibuya" :forecast/fid "f-…"

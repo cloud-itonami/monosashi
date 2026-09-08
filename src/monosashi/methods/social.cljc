@@ -11,7 +11,7 @@
     G7 — :post/server-held-key false; a :published post REQUIRES a member-DID author.
 
   Pure + deterministic body."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [monosashi.methods.score :as score]))
 
 (def disclaimer
@@ -41,8 +41,8 @@
   disclaim them). NOTE: a substring denylist is DEFENSE-IN-DEPTH only — the real G1/G3 firewall is
   structural (no point field, no reward attr, whitelist datom emit). Mirrors hakoniwa social/_scan."
   [body tokens]
-  (let [low (str/lower-case (str/replace body disclaimer ""))]
-    (some (fn [t] (when (str/includes? low (str/lower-case t)) t)) tokens)))
+  (let [low (str/lower (str/replace body disclaimer ""))]
+    (some (fn [t] (when (str/includes? low (str/lower t)) t)) tokens)))
 
 (defn- guard-no-point [body]
   (when-let [t (scan body point-tokens)]

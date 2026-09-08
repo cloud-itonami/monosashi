@@ -11,7 +11,7 @@
   The EXTERNAL AT-Proto relay leg is operator-gated (a `transport` fn carrying a member/operator
   credential — see methods/transport.cljc); with no transport, posts persist on-protocol (kotoba
   log) and the relay is :pending-operator-transport. :published requires a member-DID :author (G7)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             #?(:clj [clojure.edn :as edn])
             #?(:clj [clojure.java.io :as io])
             [monosashi.methods.score :as score]
