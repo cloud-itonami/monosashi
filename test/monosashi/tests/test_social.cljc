@@ -3,7 +3,7 @@
   Includes adversarial G7 (nil author), tamper-evidence, and idempotency cases."
   (:require [clojure.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [monosashi.methods.score :as score]
             [monosashi.methods.social :as social]
             [monosashi.methods.kotoba :as kotoba]

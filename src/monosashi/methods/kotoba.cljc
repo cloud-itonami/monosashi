@@ -8,7 +8,7 @@
   attribute value]; op is :db/add only. Self-contained sha-256 + canonical-JSON (no third-party
   deps). Deterministic — the caller supplies tx-id + as-of; no wall clock. JVM/IO behind
   #?(:clj …) so the .cljc stays portable."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             #?(:clj [clojure.edn :as edn])
             #?(:clj [clojure.java.io :as io])))
 

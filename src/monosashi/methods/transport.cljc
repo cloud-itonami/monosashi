@@ -9,7 +9,7 @@
 
   Use as the `transport` fn of monosashi.methods.social/emit:
     (social/emit post (transport/pds-transport {:pds-base ... :identifier ... :app-password ...}))"
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [babashka.http-client :as http]
             [cheshire.core :as json]))
 
