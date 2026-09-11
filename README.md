@@ -60,15 +60,15 @@ forecasts; mio accounts realized flow`). monosashi makes that firewall explicit 
 
 ```bash
 # tests (16 tests / 69 assertions — incl. adversarial calibration, nil-author, leak, tamper, idempotency)
-bb 20-actors/monosashi/run_tests.clj
+kbb 20-actors/monosashi/run_tests.cljk
 
 # one autorun cycle → skill bands + social posts + content-addressed kotoba tx (idempotent-by-content)
-bb -e '(require (quote [monosashi.methods.autorun :as ar]))
+kbb -e '(require (quote [monosashi.methods.autorun :as ar]))
        (ar/run-cycle (ar/load-residuals "20-actors/monosashi/data/seed-scores.kotoba.edn")
                      {:as-of "2026-06-27T00:00:00Z" :tx-id "cycle-1" :status ":dry-run"})'
 
 # verify the kotoba commit-DAG is intact (tamper-evident)
-bb -e '(require (quote [monosashi.methods.kotoba :as k])) (println (k/verify-chain))'
+kbb -e '(require (quote [monosashi.methods.kotoba :as k])) (println (k/verify-chain))'
 ```
 
 A real `app.bsky.feed.post` to the live PDS goes through `methods/transport.cljc`

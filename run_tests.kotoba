@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; monosashi 物差し — bb-native test runner (Clojure / babashka; no shell, per ADR-2606072802).
 ;;
 ;;   bb test
