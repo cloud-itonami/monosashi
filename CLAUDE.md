@@ -45,13 +45,13 @@ the kotoba tx CID chains onto the log's previous CID (commit-DAG, resume-safe). 
 cycles are byte-identical.
 
 ## Tests
-`bb 20-actors/monosashi/run_tests.clj` — `monosashi.tests.test-score` + `monosashi.tests.test-social`
+`kbb 20-actors/monosashi/run_tests.cljk` — `monosashi.tests.test-score` + `monosashi.tests.test-social`
 (G1/G3/G5/G7/G12 invariants + adversarial cases: inverted-calibration, nil-author G7 bypass, offset/
 missing-timestamp leak, verify-chain tamper, idempotent re-run). Keep green; wire into the fleet check.
-bb-native runner only — NO new `.sh` under 20-actors/ (ADR-2606072802 / `bb lint:no-new-shell`).
+bb-native runner only — NO new `.sh` under 20-actors/ (ADR-2606072802 / `kbb -M:lint:no-new-shell`).
 
 ## Registry
-`manifest.edn` is the SSoT. After editing it, run `bb gen:tier-b-actors` to regenerate
+`manifest.edn` is the SSoT. After editing it, run `kbb -M:gen:tier-b-actors` to regenerate
 `50-infra/etzhayyim-did-web/src/registry/tier-b-actors.gen.ts` (do not hand-edit the `.gen.ts`).
 The live `/.well-known/actors.json` + `/actor/monosashi/did.json` are served by the
 `etzhayyim-did-web` CF Worker — deploy is operator-gated (wrangler).
