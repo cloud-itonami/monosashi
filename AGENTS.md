@@ -1,6 +1,6 @@
-# 20-actors/monosashi — CLAUDE.md
+# 20-actors/monosashi — AGENTS.md
 
-物差し — predictive-actor skill yardstick. Per-actor discipline. Read with the root `CLAUDE.md`.
+物差し — predictive-actor skill yardstick. Per-actor discipline. Read with the root `AGENTS.md`.
 
 ## Identity
 - **Name**: monosashi (物差し — a *measuring-stick*; a measure, NOT a target)
